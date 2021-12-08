@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{babel-core, breakpoints-js, db8504892a, jquery, jquery.scrollex}" />
+  </component>
+</project>
