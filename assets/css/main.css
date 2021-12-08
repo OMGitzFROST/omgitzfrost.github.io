@@ -3009,9 +3009,15 @@ button:disabled,
 }
 
 .features article .image img {
+    display: block;
     border-radius: 5px 5px 0 0;
-    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
 }
+
+
 
 @media screen and (max-width: 980px) {
 
@@ -3019,7 +3025,6 @@ button:disabled,
         margin: 1em 2em 1em 0;
         width: calc(50% - 1em);
     }
-
 }
 
 @media screen and (max-width: 736px) {
@@ -3536,8 +3541,8 @@ body.is-preload #banner p {
     text-transform: uppercase;
 }
 
-#wrapper > header > .inner > a button {
-    margin-right: 2%;
+#wrapper > header > .inner > a {
+    margin-right: 1vw;
     text-decoration: none;
 }
 
@@ -4012,8 +4017,7 @@ body.is-preload #banner p {
     font-size: 0.9em;
     line-height: 1;
     margin-left: 1em;
-    padding: 0;
-    padding-left: 1em;
+    padding: 0 0 0 1em;
 }
 
 #footer .inner .copyright li:first-child {
