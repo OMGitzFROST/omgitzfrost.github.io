@@ -4000,7 +4000,7 @@ body.is-preload #banner p {
 }
 
 #footer .inner .contact {
-    width: calc(50% - 1.5em);
+    font-size: larger;
 }
 
 #footer .inner .copyright {
