@@ -8,5 +8,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="db8504892a" level="application" />
+    <orderEntry type="library" name="breakpoints-js" level="application" />
+    <orderEntry type="library" name="babel-core" level="application" />
+    <orderEntry type="library" name="jquery.scrollex" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
   </component>
 </module>
