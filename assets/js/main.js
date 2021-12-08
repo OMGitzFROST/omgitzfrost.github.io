@@ -152,9 +152,8 @@
 
 })(jQuery);
 
-function submitForm() {
-    $('form[name="contact-form"]').submit();
-    $('input[type="text"], textarea').val('');
-    $('input[type="email"]').val('');
-    $('input[type="name"]').val('');
+window.onbeforeunload = () => {
+    for (const form of document.getElementsByTagName('form')) {
+        form.reset();
+    }
 }
