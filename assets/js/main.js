@@ -145,9 +145,16 @@
         .on('keydown', function (event) {
 
             // Hide on escape.
-            if (event.keyCode == 27)
+            if (event.keyCode === 27)
                 $menu._hide();
 
         });
 
 })(jQuery);
+
+function submitForm() {
+    $('form[name="contact-form"]').submit();
+    $('input[type="text"], textarea').val('');
+    $('input[type="email"]').val('');
+    $('input[type="name"]').val('');
+}
