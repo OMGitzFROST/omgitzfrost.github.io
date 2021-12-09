@@ -149,7 +149,7 @@
 function copyDiscordID() {
     navigator.clipboard.writeText("OMGitzFROST#8911");
 
-    const tooltip = document.getElementById("copyDiscordToolTip");
+    const tooltip = document.getElementById("discordToolTip");
     tooltip.innerHTML = "Copied!";
 
     setTimeout(function () {
