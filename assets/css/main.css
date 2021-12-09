@@ -1,4 +1,3 @@
-@import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
 
 /*
@@ -272,6 +271,10 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
     padding-bottom: 1em;
     border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+}
+
+p.minor {
+    padding-bottom: 1em;
 }
 
 h2 {
@@ -3985,21 +3988,30 @@ body.is-preload #banner p {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    width: 70%;
     margin: 0 auto;
-    width: 55em;
 }
 
 #footer .inner > * {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
 }
 
 #footer .inner form {
-    margin: 0 3em 0 0;
-    width: calc(50% - 1.5em);
+    width: 70%;
+    margin: 0 auto;
 }
 
 #footer .inner .contact {
     font-size: larger;
+}
+
+#footer .inner .contact li:first-child {
+    padding-left: 0;
+}
+
+#footer .inner .contact li:last-child {
+    padding-right: 0;
 }
 
 #footer .inner .copyright {
