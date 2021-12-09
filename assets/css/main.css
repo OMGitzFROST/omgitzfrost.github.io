@@ -2684,10 +2684,6 @@ ul.contact li:before {
     width: 2.5em;
 }
 
-ul.contact li:first-child {
-    margin-top: 0;
-}
-
 @media screen and (max-width: 736px) {
 
     ul.contact li {
