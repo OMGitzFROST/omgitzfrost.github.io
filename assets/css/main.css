@@ -3434,6 +3434,10 @@ body.is-menu-visible #menu .inner {
     padding-left: 0;
 }
 
+#banner .inner .copyright {
+    margin-top: 15vh;
+}
+
 #banner .inner .copyright li {
     border-left: solid 2px rgba(255, 255, 255, 0.125);
     color: rgba(255, 255, 255, 0.35);
@@ -4156,7 +4160,7 @@ body.is-preload #banner p {
     display: inline-block;
 }
 
-.tooltip .tooltiptext {
+.tooltip .copyDiscordToolTipText {
     visibility: hidden;
     width: 140px;
     background-color: #555;
@@ -4173,7 +4177,7 @@ body.is-preload #banner p {
     font-size: 14px;
 }
 
-.tooltip .tooltiptext::after {
+.tooltip .copyDiscordToolTipText::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -4184,7 +4188,7 @@ body.is-preload #banner p {
     border-color: #555 transparent transparent transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip:hover .copyDiscordToolTipText {
     visibility: visible;
     opacity: 1;
 }
