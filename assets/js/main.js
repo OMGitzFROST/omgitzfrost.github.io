@@ -145,3 +145,14 @@
         });
 
 })(jQuery);
+
+function copyDiscordID() {
+    navigator.clipboard.writeText("OMGitzFROST#8911");
+
+    const tooltip = document.getElementById("copyDiscordToolTip");
+    tooltip.innerHTML = "Copied!";
+
+    setTimeout(function () {
+        tooltip.innerHTML = "Copy username";
+    }, 3000);
+}
