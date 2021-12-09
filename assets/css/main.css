@@ -4155,12 +4155,12 @@ body.is-preload #banner p {
     }
 }
 
-.tooltip {
+.discordToolTip {
     position: relative;
     display: inline-block;
 }
 
-.tooltip .copyDiscordToolTipText {
+.discordToolTip .discordToolTipText {
     visibility: hidden;
     width: 140px;
     background-color: #555;
@@ -4177,7 +4177,7 @@ body.is-preload #banner p {
     font-size: 14px;
 }
 
-.tooltip .copyDiscordToolTipText::after {
+.discordToolTip .discordToolTipText::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -4188,7 +4188,7 @@ body.is-preload #banner p {
     border-color: #555 transparent transparent transparent;
 }
 
-.tooltip:hover .copyDiscordToolTipText {
+.discordToolTip:hover .discordToolTipText {
     visibility: visible;
     opacity: 1;
 }
