@@ -40,23 +40,24 @@
             <h2>Oops! Page Not Found</h2>
             <p>Uh oh, we can't seem to find the page you are looking for, Try going back to the previous page or
                 <a href="/index.html">click here</a> to go back to the home page.</p>
-        </div>
 
-        <!-- Footer -->
-        <section id="footer">
-            <div class="inner">
-                <ul class="contact">
-                    <li><a href="mailto:contact@frostdeveloper.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-                    <li><a href="https://twitter.com/omgitzfrost" target="_blank" class="icon brands fa-twitter"><span
-                            class="label">Twitter</span></a></li>
-                    <li><a href="https://github.com/OMGitzFROST?tab=repositories" target="_blank" class="icon brands fa-github"><span class="label">
+            <ul class="contact">
+                <li><a href="mailto:contact@frostdeveloper.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="https://twitter.com/omgitzfrost" target="_blank" class="icon brands fa-twitter"><span
+                        class="label">Twitter</span></a></li>
+                <li><a href="https://github.com/OMGitzFROST?tab=repositories" target="_blank" class="icon brands fa-github"><span class="label">
                     Github</span></a></li>
-                </ul>
-                <ul class="copyright">
-                    <li>&copy; FrostDeveloper. All rights reserved.</li>
-                </ul>
-            </div>
-        </section>
+
+                <li class="tooltip" value="OMGitzFROST#8911" id="myInput">
+                    <a href="#" class="icon brands fa-discord" onclick="myFunction()">
+                        <span class="tooltiptext" id="myTooltip">Copy Username</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; FrostDeveloper. All rights reserved.</li>
+            </ul>
+        </div>
     </section>
 </div>
 <!-- Scripts -->
@@ -68,5 +69,13 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+    function myFunction() {
+        navigator.clipboard.writeText("OMGitzFROST#8911");
+
+        const tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied!";
+    }
+</script>
 </body>
 </html>
