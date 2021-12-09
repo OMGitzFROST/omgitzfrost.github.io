@@ -147,7 +147,7 @@
 })(jQuery);
 
 function copyDiscordID() {
-    navigator.clipboard.writeText("OMGitzFROST#8911");
+    navigator.clipboard.writeText("OMGitzFROST#8911").then(r => r.toString());
 
     const tooltip = document.getElementById("discordToolTip");
     tooltip.innerHTML = "Copied!";
@@ -155,4 +155,5 @@ function copyDiscordID() {
     setTimeout(function () {
         tooltip.innerHTML = "Copy username";
     }, 3000);
+    return false;
 }
