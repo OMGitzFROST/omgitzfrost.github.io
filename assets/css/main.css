@@ -2440,7 +2440,7 @@ input[type="radio"] + label:before {
 
 .image.fit {
     display: block;
-    margin: 0 0 2em 0;
+    margin: 0 0 5em 0;
     width: 100%;
 }
 
@@ -2925,6 +2925,7 @@ input[type="button"].fit,
 button.fit,
 .button.fit {
     width: 100%;
+    margin-bottom: 1em;
 }
 
 input[type="submit"].small,
@@ -4170,7 +4171,7 @@ body.is-preload #banner p {
     position: absolute;
     z-index: 1;
     bottom: 150%;
-    left: 50%;
+    left: 65%;
     margin-left: -75px;
     opacity: 0;
     transition: opacity 0.3s;
