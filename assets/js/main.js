@@ -162,3 +162,21 @@ window.onbeforeunload = () => {
         form.reset();
     }
 }
+
+$(document).ready(function () {
+    /* Check width on page load*/
+    if ($(window).width() < 600) {
+        $('.button').addClass('fit');
+    } else {
+        $('.button').removeClass('fit');
+    }
+});
+
+$(window).resize(function () {
+    /*If browser resized, check width again */
+    if ($(window).width() < 600) {
+        $('.button').addClass('fit');
+    } else {
+        $('.button').removeClass('fit');
+    }
+});
