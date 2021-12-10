@@ -45,7 +45,7 @@
     }
 
     // Menu.
-    var $menu = $('#menu');
+    const $menu = $('#menu');
 
     $menu._locked = false;
 
@@ -111,7 +111,7 @@
         })
         .on('click', 'a', function (event) {
 
-            var href = $(this).attr('href');
+            const href = $(this).attr('href');
 
             event.preventDefault();
             event.stopPropagation();
