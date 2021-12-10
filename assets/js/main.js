@@ -1,6 +1,6 @@
 (function ($) {
 
-    var $window = $(window),
+    const $window = $(window),
         $body = $('body'),
         $header = $('#header'),
         $banner = $('#banner');
@@ -143,7 +143,6 @@
                 $menu._hide();
 
         });
-
 })(jQuery);
 
 function copyDiscordID() {
@@ -154,6 +153,12 @@ function copyDiscordID() {
 
     setTimeout(function () {
         tooltip.innerHTML = "Copy username";
+        window.open("https://discord.com/channels/@me")
     }, 3000);
-    return false;
+}
+
+window.onbeforeunload = () => {
+    for (const form of document.getElementsByTagName('form')) {
+        form.reset();
+    }
 }
