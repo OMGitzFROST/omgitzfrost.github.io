@@ -147,13 +147,16 @@
 
 function copyDiscordID() {
     navigator.clipboard.writeText("OMGitzFROST#8911").then(r => r.toString());
-
     const tooltip = document.getElementById("discordToolTip");
-    tooltip.innerHTML = "Copied!";
 
     setTimeout(function () {
+        tooltip.innerHTML = "Opening Discord...";
+    }, 1000);
+
+    setTimeout(function () {
+        window.open("https://discord.com/channels/@me");
         tooltip.innerHTML = "Copy username";
-        window.open("https://discord.com/channels/@me")
+        alert("We copied our username, paste it into Discord");
     }, 3000);
 }
 
