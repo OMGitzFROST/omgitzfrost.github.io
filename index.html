@@ -91,7 +91,7 @@
             <p class="minor">Like what you see? Have questions or need a custom projects? Whatever the case may be, feel free to
                              contact us.</p>
             <form id="fs-frm" name="survey-form" accept-charset="utf-8" action="https://formspree.io/f/xdobonrv"
-                  method="post">
+                  method="post" autocomplete="on">
                 <fieldset id="fs-frm-inputs" class="fields">
                     <div class="field">
                         <label for="full-name">Name</label>
@@ -119,7 +119,8 @@
                     </div>
                     <input type="hidden" name="_subject" id="email-subject" value="Client Message (FrostDeveloper)">
                 </fieldset>
-                <input class="button " type="submit" value="Send Message">
+                <input class="button " type="submit" value='Send Message'>
+                <input type="hidden" name="_next" value="./confirmation.html"/>
             </form>
             <ul class="contact">
                 <li><a href="mailto:contact@frostdeveloper.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
