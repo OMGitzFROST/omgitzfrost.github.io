@@ -38,7 +38,7 @@
     <section id="banner">
         <div class="inner align-center">
             <h2>Form Submitted!</h2>
-            <p>Please wait while we redirect you, if you are not redirected in the next <span class="redirect-timer">3</span> seconds <a
+            <p>Please wait while we redirect you, if you are not redirected in the next <span id="redirect-timer"></span> seconds <a
                     href="/index.html">click here</a> to go back to the home page.</p>
 
             <ul class="contact">
@@ -69,5 +69,18 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+    let timeleft = 3;
+    const downloadTimer = setInterval(function () {
+        if (timeleft <= -1) {
+            clearInterval(downloadTimer);
+            window.open(document.referrer);
+        } else {
+            document.getElementById("redirect-timer").innerHTML = timeleft;
+        }
+        timeleft -= 1;
+    }, 1000);
+</script>
 </body>
 </html>
