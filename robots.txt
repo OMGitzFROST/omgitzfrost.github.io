@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.frostdeveloper.com/sitemap.xml
