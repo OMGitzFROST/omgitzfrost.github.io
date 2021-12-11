@@ -39,10 +39,8 @@
         <header>
             <div class="inner">
                 <h2>MessageCraft</h2>
-                <p>A simple, easy to use spigot plugin that introduces custom server messages in a easy to use
-                    manner.</p>
-                <a class="button primary"
-                   href="https://github.com/OMGitzFROST/MessageCraft/releases/download/v1.0/MessageCraft-1.0.jar">Download</a>
+                <p>A simple, easy to use spigot plugin that introduces custom server messages in an easy-to-use manner.</p>
+                <a id="download" class="button primary">Download</a>
                 <a class="button" href="https://github.com/OMGitzFROST/MessageCraft">Repository</a>
                 <a class="button" href="../portfolio.html">More Projects <span class="icon solid fa-arrow-right"></span></a>
             </div>
@@ -57,16 +55,16 @@
                         <table class="alt">
                             <thead>
                             <tr>
+                                <th>Last Updated</th>
                                 <th>Version</th>
-                                <th>Languages Supported</th>
-                                <th>For Minecraft Version</th>
+                                <th>Total Downloads</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>1.0</td>
-                                <td>en</td>
-                                <td>1.17+</td>
+                                <td class="timeAgo">N/A</td>
+                                <td class="release-version">N/A</td>
+                                <td class="release-downloads">N/A</td>
                             </tr>
                             </tbody>
                         </table>
@@ -84,7 +82,7 @@
                 <section>
                     <h3 class="major">Features</h3>
                     <div class="row">
-                        <div class="col-6 col-12-medium">
+                        <div class="col-12-medium">
                             <ul>
                                 <li>Customizable Join/Quit Messages</li>
                                 <li>Multi-Language Support (en, es)</li>
@@ -99,11 +97,11 @@
                     <p>This installation process is designed to be as simple as possible, Please make sure your server
                         is not running while you install this plugin as this can cause issues.</p>
                     <div class="row">
-                        <div class="col-6 col-12-medium">
+                        <div class="col-12-medium">
                             <ul>
                                 <li>Set up a server <a
                                         href="https://minecraft.fandom.com/wiki/Tutorials/Setting_up_a_server">(Learn
-                                    How)</a></li>
+                                                                                                               How)</a></li>
                                 <li>Download the latest release.</li>
                                 <li>Move the MessageCraft jar file to your plugin's folder</li>
                                 <li>Start or Restart Your Server</li>
@@ -121,16 +119,14 @@
                     <p>If you'd like to make a financial contribution to the project, you can make a donation here page.
                         If you can't make a donation, don't worry! There are lots of other ways to contribute:</p>
                     <div class="row">
-                        <div class="col-6 col-12-medium">
+                        <div class="col-12-medium">
                             <ul>
-                                <li>Do you run a server? Take a look at our "bug: unconfirmed" issues, where you can
-                                    find issues that need extra testing and investigation.
+                                <li>Do you run a server? Take a look at our "bug: unconfirmed" issues, where you can find issues that need extra
+                                    testing and investigation.
                                 </li>
-                                <li>Do you speak multiple languages? Please send us a message on twitter for ways to
-                                    help.
-                                </li>
-                                <li>If you're a developer, you could look through our "open to PR" issues. We're always
-                                    happy to receive bug fixes and feature additions as pull requests.
+                                <li>Do you speak multiple languages? Please send us a message on twitter for ways to help.</li>
+                                <li>If you're a developer, you could look through our "open to PR" issues. We're always happy to receive bug fixes and
+                                    feature additions as pull requests.
                                 </li>
                             </ul>
                         </div>
@@ -151,6 +147,7 @@
                     Github</span></a></li>
 
                 <li class="discordToolTip">
+                    <!--suppress HtmlUnknownAnchorTarget -->
                     <a href="#!" class="icon brands fa-discord" onclick="copyDiscordID();">
                         <span class="discordToolTipText" id="discordToolTip">Copy Username</span>
                     </a>
@@ -172,6 +169,29 @@
 <script src="../assets/js/breakpoints.min.js"></script>
 <script src="../assets/js/util.js"></script>
 <script src="../assets/js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $.get('https://api.github.com/repos/OMGitzFROST/MessageCraft/releases/latest', function (release) {
+            const asset = release.assets[0];
+            const oneHour = 60 * 60 * 1000;
+            const oneDay = 24 * oneHour;
+            const dateDiff = new Date() - new Date(asset.updated_at);
+            let timeAgo;
+            if (dateDiff < oneDay) {
+                timeAgo = (dateDiff / oneHour).toFixed(0) + " hour(s) ago";
+            } else {
+                timeAgo = (dateDiff / oneDay).toFixed(0) + " day(s) ago";
+            }
+
+            $("#download").attr("href", asset.browser_download_url);
+            $(".timeAgo").text(timeAgo);
+            $(".release-version").text(release.tag_name.replace("v", ""));
+            $(".release-downloads").text(asset.download_count);
+        });
+    });
+</script>
 
 </body>
 </html>
