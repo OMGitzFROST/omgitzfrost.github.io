@@ -49,6 +49,7 @@
                     Github</span></a></li>
 
                 <li class="discordToolTip">
+                    <!--suppress HtmlUnknownAnchorTarget -->
                     <a href="#!" class="icon brands fa-discord" onclick="copyDiscordID();">
                         <span class="discordToolTipText" id="discordToolTip">Copy Username</span>
                     </a>
@@ -71,15 +72,21 @@
 <script src="assets/js/main.js"></script>
 
 <script>
-    let timeleft = 3;
+    let remaining = 5;
     const downloadTimer = setInterval(function () {
-        if (timeleft <= -1) {
+        if (remaining <= -1) {
             clearInterval(downloadTimer);
-            window.open(document.referrer);
+
+            if (!document.referrer) {
+                window.location.replace("./index.html");
+            } else {
+                window.location.replace(document.referrer);
+            }
+
         } else {
-            document.getElementById("redirect-timer").innerHTML = timeleft;
+            document.getElementById("redirect-timer").innerHTML = remaining;
         }
-        timeleft -= 1;
+        remaining -= 1;
     }, 1000);
 </script>
 </body>
