@@ -170,8 +170,10 @@ $(document).ready(function () {
     /* Check width on page load*/
     if ($(window).width() < 600) {
         $('.button').addClass('fit');
+        $('.featured').addClass('fit');
     } else {
         $('.button').removeClass('fit');
+        $('.featured').removeClass('fit');
     }
 });
 
@@ -179,7 +181,9 @@ $(window).resize(function () {
     /*If browser resized, check width again */
     if ($(window).width() < 600) {
         $('.button').addClass('fit');
+        $('.featured').addClass('fit');
     } else {
         $('.button').removeClass('fit');
+        $('.featured').removeClass('fit');
     }
 });
