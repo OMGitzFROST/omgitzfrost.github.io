@@ -2994,6 +2994,15 @@ button:disabled,
     width: calc(50% - 1.5em);
 }
 
+.features article.fit {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.features article.fit:first-child {
+    margin-right: 0;
+}
+
 .features article:nth-child(2n) {
     margin-right: 0;
 }
@@ -4031,6 +4040,10 @@ body.is-preload #banner p {
     font-size: larger;
 }
 
+#footer .inner .contact li {
+    margin: 2%;
+}
+
 #footer .inner .contact li:first-child {
     padding-left: 0;
 }
@@ -4131,7 +4144,6 @@ body.is-preload #banner p {
     #footer .inner .contact {
         margin: 0 0 3em 0;
     }
-
 }
 
 @media screen and (max-width: 480px) {
