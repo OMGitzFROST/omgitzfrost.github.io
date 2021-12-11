@@ -35,30 +35,33 @@
     </nav>
 
     <!-- Banner -->
-    <section id="banner">
-        <div class="inner align-center">
-            <h2>Form Submitted!</h2>
-            <p>Please wait while we redirect you, if you are not redirected in the next <span id="redirect-timer"></span> seconds <a
-                    href="/index.html">click here</a> to go back to the home page.</p>
+    <section id="wrapper">
+        <header>
+            <div class="inner align-center">
+                <h2>Form Submitted!</h2>
+                <p>Please wait while we redirect you, if you are not redirected in the next <span id="redirect-timer"></span> seconds <a
+                        href="/index.html">click here</a> to go back to the home page.</p>
 
-            <ul class="contact">
-                <li><a href="mailto:contact@frostdeveloper.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-                <li><a href="https://twitter.com/omgitzfrost" target="_blank" class="icon brands fa-twitter"><span
-                        class="label">Twitter</span></a></li>
-                <li><a href="https://github.com/OMGitzFROST?tab=repositories" target="_blank" class="icon brands fa-github"><span class="label">
+                <ul class="contact">
+                    <li><a href="mailto:contact@frostdeveloper.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                    <li><a href="https://twitter.com/omgitzfrost" target="_blank" class="icon brands fa-twitter"><span
+                            class="label">Twitter</span></a></li>
+                    <li><a href="https://github.com/OMGitzFROST?tab=repositories" target="_blank" class="icon brands fa-github"><span class="label">
                     Github</span></a></li>
 
-                <li class="discordToolTip">
-                    <!--suppress HtmlUnknownAnchorTarget -->
-                    <a href="#!" class="icon brands fa-discord" onclick="copyDiscordID();">
-                        <span class="discordToolTipText" id="discordToolTip">Copy Username</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="copyright">
-                <li>&copy; FrostDeveloper. All rights reserved.</li>
-            </ul>
-        </div>
+                    <li class="discordToolTip">
+                        <!--suppress HtmlUnknownAnchorTarget -->
+                        <a href="#!" class="icon brands fa-discord" onclick="copyDiscordID();">
+                            <span class="discordToolTipText" id="discordToolTip">Copy Username</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; FrostDeveloper. All rights reserved.</li>
+                </ul>
+            </div>
+
+        </header>
     </section>
 </div>
 <!-- Scripts -->
@@ -77,7 +80,7 @@
         if (remaining <= -1) {
             clearInterval(downloadTimer);
 
-            if (!document.referrer) {
+            if (!document.referrer || document.referrer === "redirect.html") {
                 window.location.replace("./index.html");
             } else {
                 window.location.replace(document.referrer);
